@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDF7"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium"
+        tools:context=".AddEditNote">
+
+        <TextView
+            android:id="@+id/tvPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nouvelle Note"
+            android:textSize="@dimen/text_size_header"
+            android:textStyle="bold"
+            android:textColor="#6C3600"
+            android:fontFamily="@font/aguafina_script"
+            android:textAlignment="center"
+            android:layout_marginBottom="@dimen/spacing_large" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardBackgroundColor="#FFF8E1"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_medium">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Titre"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold"
+                    android:textColor="#6C3600"
+                    android:layout_marginBottom="@dimen/spacing_small" />
+
+                <EditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Entrez le titre..."
+                    android:background="@android:color/white"
+                    android:padding="@dimen/button_padding"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="#6C3600"
+                    android:maxLines="1"
+                    android:inputType="textCapSentences" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="250dp"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardBackgroundColor="#FFF8E1"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_medium">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contenu"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold"
+                    android:textColor="#6C3600"
+                    android:layout_marginBottom="@dimen/spacing_small" />
+
+                <EditText
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Écrivez votre note ici..."
+                    android:background="@android:color/white"
+                    android:padding="@dimen/button_padding"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="#6C3600"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine|textCapSentences" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Annuler"
+                android:backgroundTint="#A1887F"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_marginEnd="@dimen/spacing_small"
+                android:padding="@dimen/button_padding" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Enregistrer"
+                android:backgroundTint="#6C3600"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:padding="@dimen/button_padding" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
